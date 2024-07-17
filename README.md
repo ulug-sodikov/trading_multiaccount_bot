@@ -1,6 +1,6 @@
 ## Add `.env` file
 To use this library you should add `.env` file in the root directory.
-Example of `.env` file content:
+Template for `.env` file:
 ```
 BASE_URL=<TRADE_LOCKER_BASE_URL>
 
