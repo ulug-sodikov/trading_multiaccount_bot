@@ -41,7 +41,9 @@ class TradeLockerUser:
             "password": self.password, 
             "server": self.server
         }
-        jwt_data = requests.post(url, json=data).json()
+        response = requests.post(url, json=data)
+        response.raise_for_status()
+        jwt_data = response.json()
         expire_date = datetime.datetime.strptime(
             jwt_data["expireDate"], self.jwt_expire_date_format
         )
@@ -62,5 +64,6 @@ class TradeLockerUser:
         url = urljoin(BASE_URL, AUTH_JWT_ALL_ACCOUNTS_PATH)
         headers = self.get_auth_headers()
         response = requests.get(url, headers=headers)
+        response.raise_for_status()
 
         return response.json()['accounts']
