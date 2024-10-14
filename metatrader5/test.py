@@ -17,9 +17,7 @@ def do_some_operations():
         os.environ['MT5_SERVER']
     )
     mt5_terminal.display_account_info()
-    mt5_terminal.order_buy(
-        symbol="USDCHF", sl=0.879, tp=0.8802, lot=0.1
-    )
+    mt5_terminal.order_buy(symbol="XAUUSD", lot=0.1, comment='some')
 
 # WARNING: DO NOT EXECUTE THIS WITH REAL ACCOUNT
 if __name__ == '__main__':
