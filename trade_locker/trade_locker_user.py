@@ -12,7 +12,7 @@ from paths import (
 
 
 load_dotenv()
-BASE_URL = os.environ["BASE_URL"]
+BASE_URL = os.environ["TRADELOCKER_BASE_URL"]
 
 
 class TradeLockerUser:

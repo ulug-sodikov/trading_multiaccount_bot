@@ -10,9 +10,9 @@ load_dotenv()
 
 def display_accounts():
     trade_locker_user = TradeLockerUser(
-        email=os.environ["EMAIL"],
-        password=os.environ["PASSWORD"],
-        server=os.environ["SERVER"]
+        email=os.environ["TRADELOCKER_EMAIL"],
+        password=os.environ["TRADELOCKER_PASSWORD"],
+        server=os.environ["TRADELOCKER_SERVER"]
     )
     trade_locker_user.assign_jwt()
 
