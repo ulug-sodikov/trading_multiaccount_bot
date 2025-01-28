@@ -13,7 +13,7 @@ def do_some_operations():
     mt5_terminal.connect()
     mt5_terminal.login_into_account(
         int(os.environ['MT5_ACCOUNT_NUMBER']),
-        os.environ['MT5_PASSWORD'],
+        os.environ['MT5_ACCOUNT_PASSWORD'],
         os.environ['MT5_SERVER']
     )
     mt5_terminal.display_account_info()
